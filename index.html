@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <!--
+        The tailwind CDN is designed for development purposes only, and is not the best choice for production.
+        Read more here: https://tailwindcss.com/docs/installation 
+    -->
+    <!-- example for dark theme styling when using tailwind cdn -->
+    <style>
+        .container {
+            width: 250px;
+            margin: 20px auto;
+            background-color: rgb(134, 133, 133);
+            border: 2px solid #ccc; 
+            border-radius: 8px;
+            overflow: hidden; 
+
+        }
+
+        .but {
+            float: left;
+            width: 50px;
+            margin: 5px;
+            background-color: white;
+            text-align: center;
+            padding: 5px 0;
+            border-radius: 4px;
+            cursor: pointer;
+            border: 1px solid #ccc;;
+        }
+
+        .but:hover {
+            color: aliceblue;
+            background-color: rgb(45, 13, 228);
+        }
+
+        .monitor {
+            background-color: black;
+            padding: 4px;
+            margin: 4px;
+            color: white;
+            text-align: right;
+        }
+    </style>
+</head>
+
+<body class="dark:text-white light:text-black">
+
+    <div class="container">
+
+
+        <div class="monitor" id="result">0</div>
+
+        <div class="but">C</div>
+        <div class="but">1</div>
+        <div class="but">2</div>
+        <div class="but">3</div>
+        <div class="but">+</div>
+        <div class="but">5</div>
+        <div class="but">4</div>
+        <div class="but">6</div>
+        <div class="but">-</div>
+        <div class="but">7</div>
+        <div class="but">8</div>
+        <div class="but">9</div>
+        <div class="but">*</div>
+        <div class="but">/</div>
+        <div class="but">0</div>
+        <div class="but">=</div>
+    </div>
+
+    <script>
+        // custom config for the MTW app 
+        const mtwAppConfig = {
+            border: true // app border in the MTW page                    
+        }
+
+        ///////////////////////////////////////////////////////
+        // implement this functions in order to use private API        
+        const sendPrivateApiRequest = async () => {
+            // your code here:
+            // sendRequestToParent({ cat: 'getAssets' })
+        }        
+
+        const acceptPrivateApiResponse = async (data) => {
+            // process received data here:
+            // console.log(data)
+        }
+
+        // use this in order to send on document load
+        document.addEventListener('DOMContentLoaded', () => {
+            // your code here:
+            //sendRequestToParent({ method: 'getAssets' })
+        })
+
+    </script>
+    <script src="https://morethanwallet.com/appstore/index.js"></script>
+</body>
+
+</html>
